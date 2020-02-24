@@ -6,7 +6,7 @@ router.get('/', function(req, res) {
     res.render('index')
 });
 router.post('/', function(req, res) {
-    if (req.content)
+    if (!req.content)
         res.json({
             message: "Tại sao ko post nội dung lên hả???"
         })
