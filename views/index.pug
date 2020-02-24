@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1= 'VietNam'
+    p Welcome to USA
+    form#send-content(action='/',method="POST")
+        label(for="content:") Content:
+        input#content(type="text" name="content")
+        input(type="button" value="Send" onclick="sendContent()")
+    h3#frontendMessage
+    h4#message
+    script(src="js/jquery-3.4.1.min.js")
+    script(src="js/index.js")
+
+
