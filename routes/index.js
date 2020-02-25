@@ -6,13 +6,14 @@ router.get('/', function(req, res) {
     res.render('index')
 });
 router.post('/', function(req, res) {
-    if (!req.content)
+    console.log("req.content:",req.body.content)
+    if (!req.body.content)
         res.json({
             message: "Tại sao ko post nội dung lên hả???"
         })
     else
         res.json({
-            frontendMessage: req.content,
+            frontendMessage: req.body.content,
             message: "Nam yêu Linh heo nhiều lắm nè"
         })
 });
